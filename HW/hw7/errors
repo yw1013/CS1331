@@ -1,0 +1,173 @@
+Last login: Wed Apr  1 22:27:37 on ttys000
+lawn-143-215-106-74:~ yw$ cd dropbox/cs1331/hw7
+lawn-143-215-106-74:hw7 yw$ javac PlasterClash.java
+PlasterClash.java:56: error: cannot find symbol
+        return field.cards();
+                    ^
+  symbol:   method cards()
+  location: variable field of type Field
+PlasterClash.java:93: error: cannot find symbol
+        ArrayList<Card> played = playZone.discardAll();
+                                         ^
+  symbol:   method discardAll()
+  location: variable playZone of type Zone
+PlasterClash.java:95: error: cannot find symbol
+            currentPlayer().getTrashHeap().add(card);
+                                          ^
+  symbol:   method add(Card)
+  location: class Zone
+PlasterClash.java:107: error: cannot find symbol
+        if (c.getCost() <= curKeebles) {
+             ^
+  symbol:   method getCost()
+  location: variable c of type Card
+PlasterClash.java:108: error: cannot find symbol
+            if (c.isScorable()) {
+                 ^
+  symbol:   method isScorable()
+  location: variable c of type Card
+PlasterClash.java:117: error: cannot find symbol
+            field.buyCard(c);
+                 ^
+  symbol:   method buyCard(Card)
+  location: variable field of type Field
+PlasterClash.java:118: error: cannot find symbol
+            currentPlayer().getTrashHeap().add(c);
+                                          ^
+  symbol:   method add(Card)
+  location: class Zone
+PlasterClash.java:119: error: cannot find symbol
+            curKeebles -= c.getCost();
+                           ^
+  symbol:   method getCost()
+  location: variable c of type Card
+PlasterClash.java:215: error: cannot find symbol
+                 + cur.getTree().size());
+                                ^
+  symbol:   method size()
+  location: class Zone
+PlasterClash.java:233: error: cannot find symbol
+                        Card c = cur.getHand().get(0);
+                                              ^
+  symbol:   method get(int)
+  location: class Zone
+PlasterClash.java:234: error: cannot find symbol
+                        c.play(game);
+                         ^
+  symbol:   method play(PlasterClash)
+  location: variable c of type Card
+PlasterClash.java:239: error: cannot find symbol
+                        cur.getHand().get(idx).play(game);
+                                     ^
+  symbol:   method get(int)
+  location: class Zone
+PlasterClash.java:252: error: cannot find symbol
+                .mapToInt(c -> c.getCost()).min().orElse(Integer.MAX_VALUE);
+                                ^
+  symbol:   method getCost()
+  location: variable c of type Card
+PlasterClash.java:265: error: cannot find symbol
+                minCost = available.stream().mapToInt(c -> c.getCost())
+                                                            ^
+  symbol:   method getCost()
+  location: variable c of type Card
+./Player.java:22: error: incompatible types: Tree cannot be converted to Zone
+        tree = new Tree();
+               ^
+./Player.java:26: error: cannot find symbol
+        tree.shuffle();
+            ^
+  symbol:   method shuffle()
+  location: variable tree of type Zone
+./Player.java:37: error: cannot find symbol
+        return tree.numGnomes() + hand.numGnomes() + trashHeap.numGnomes();
+                   ^
+  symbol:   method numGnomes()
+  location: variable tree of type Zone
+./Player.java:37: error: cannot find symbol
+        return tree.numGnomes() + hand.numGnomes() + trashHeap.numGnomes();
+                                      ^
+  symbol:   method numGnomes()
+  location: variable hand of type Zone
+./Player.java:37: error: cannot find symbol
+        return tree.numGnomes() + hand.numGnomes() + trashHeap.numGnomes();
+                                                              ^
+  symbol:   method numGnomes()
+  location: variable trashHeap of type Zone
+./Player.java:56: error: cannot find symbol
+        if (tree.size() > 0) {
+                ^
+  symbol:   method size()
+  location: variable tree of type Zone
+./Player.java:57: error: cannot find symbol
+            hand.add(tree.remove(0));
+                         ^
+  symbol:   method remove(int)
+  location: variable tree of type Zone
+./Player.java:58: error: cannot find symbol
+        } else if (trashHeap.size() > 0) {
+                            ^
+  symbol:   method size()
+  location: variable trashHeap of type Zone
+./Player.java:59: error: cannot find symbol
+            trashHeap.moveCardsTo(tree);
+                     ^
+  symbol:   method moveCardsTo(Zone)
+  location: variable trashHeap of type Zone
+./Player.java:60: error: cannot find symbol
+            tree.shuffle();
+                ^
+  symbol:   method shuffle()
+  location: variable tree of type Zone
+./Player.java:61: error: cannot find symbol
+            hand.add(tree.remove(0));
+                         ^
+  symbol:   method remove(int)
+  location: variable tree of type Zone
+./Player.java:69: error: cannot find symbol
+        hand.moveCardsTo(trashHeap);
+            ^
+  symbol:   method moveCardsTo(Zone)
+  location: variable hand of type Zone
+./Player.java:78: error: cannot find symbol
+        return hand.size() > 0;
+                   ^
+  symbol:   method size()
+  location: variable hand of type Zone
+./Player.java:86: error: cannot find symbol
+        int idx = rand.nextInt(hand.size());
+                                   ^
+  symbol:   method size()
+  location: variable hand of type Zone
+./Player.java:96: error: cannot find symbol
+        Card randy = hand.get(idx);
+                         ^
+  symbol:   method get(int)
+  location: variable hand of type Zone
+./Player.java:97: error: cannot find symbol
+        trashHeap.add(randy);
+                 ^
+  symbol:   method add(Card)
+  location: variable trashHeap of type Zone
+./Player.java:98: error: cannot find symbol
+        hand.remove(idx);
+            ^
+  symbol:   method remove(int)
+  location: variable hand of type Zone
+./Player.java:107: error: cannot find symbol
+        if (hand.contains(c)) {
+                ^
+  symbol:   method contains(Card)
+  location: variable hand of type Zone
+./Player.java:108: error: cannot find symbol
+            trashHeap.add(c);
+                     ^
+  symbol:   method add(Card)
+  location: variable trashHeap of type Zone
+./Player.java:109: error: cannot find symbol
+            hand.remove(c);
+                ^
+  symbol:   method remove(Card)
+  location: variable hand of type Zone
+34 errors
+lawn-143-215-106-74:hw7 yw$ 
